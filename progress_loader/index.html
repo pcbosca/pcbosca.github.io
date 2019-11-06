@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image preloader</title>
+
+  <style>
+    #gallery_images {
+      text-align: center;
+    }
+    #gallery_images img {
+      width: 25%;
+    }
+
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+    }
+
+    #myBar {
+      width: 0%;
+      height: 30px;
+      background-color: #4CAF50;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Show custom progress bar to show UI of percentage progress-->
+  <div id="myProgress">
+    <!-- Pecentage progress in numbers -->
+    <div id="myBar">0%</div>
+  </div>
+
+  <!-- Container to append Images loaded using PreloadJS -->
+  <div id="gallery_images"></div>
+
+  <script src="preloadjs.min.js"></script>
+
+  <script>
+    var gallery_images = document.getElementById("gallery_images");
+    var myBar = document.getElementById("myBar");
+
+    var img_queue = new createjs.LoadQueue(false);
+    img_queue.on("progress", event => {
+      var progress_percentage = Math.floor(event.progress * 100);
+
+      myBar.style.width = progress_percentage + "%";
+      myBar.innerHTML = progress_percentage + "%";
+
+      console.log("progress " + progress_percentage);
+    }, this);
+    img_queue.on("complete", event => {
+      alert("Complete!");
+    }, this);
+    img_queue.on("fileload", handleFileComplete, this);
+
+    img_queue.loadFile("images/Hydrangeas.jpg");
+    img_queue.loadFile("images/Jellyfish.jpg");
+    img_queue.loadFile("images/Koala.jpg");
+    img_queue.loadFile("images/Lighthouse.jpg");
+    img_queue.loadFile("images/Penguins.jpg");
+    img_queue.loadFile("images/Tulips.jpg");
+    img_queue.loadFile("images/Chrysanthemum.jpg");
+
+    /*img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/1.png");
+    img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/2.png");
+    img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/3.png");
+    img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/4.png");
+    img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/5.png");
+    img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/6.png");
+    img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/7.png");
+    img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/8.png");*/
+
+    function handleFileComplete(event) {
+      var item = event.item;
+      var type = item.type;
+
+      if (type == createjs.Types.IMAGE) {
+        gallery_images.appendChild(event.result);
+        //alert("Result " + event.result.src);
+      }
+    }
+
+  </script>
+</body>
+
+</html>
