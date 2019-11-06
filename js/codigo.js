@@ -4,7 +4,7 @@
 alert("Hola mundo desde JavaScript!!")
   */
 function cambia() {
-    document.getElementById("textoHola").innerHTML = "<p>Espero que funcione y no me mateis</p>"
+    document.getElementById("miTexto").innerHTML = "<p>Espero que funcione y no me mateis</p>"
 }
  
 var boton = document.getElementById("boton")
