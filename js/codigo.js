@@ -2,14 +2,14 @@
 
 /* // Hola mundo
 alert("Hola mundo desde JavaScript!!")
- 
+  */
 function cambia() {
     document.getElementById("textoHola").innerHTML = "<p>Espero que funcione y no me mateis</p>"
 }
  
 var boton = document.getElementById("boton")
 boton.addEventListener("click", cambia)
- 
+ /*
 // VARIABLES
 var n = 12
 var m = 4
