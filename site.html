@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            max-width: 500px;
+            margin: auto
+        }
+
+        .principal {
+            position: relative;
+            background-color: darksalmon;
+            height: 300px;
+            width: 400px;
+            left: 50px;
+            top: 100px;
+            z-index: 1
+        }
+
+        .detras {
+            position: relative;
+            background-color: blue;
+            height: 300px;
+            width: 400px;
+            left: 75px;
+            top: -150px
+        }
+
+        @media screen and (max-width: 480px) {
+            .principal {
+                position: static
+            }
+
+            .detras {
+                position: static
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="principal">
+            <h1>Delante</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quod eos natus repellendus quaerat!
+                Veritatis tempora molestiae qui quae hic libero sunt aliquid illo nostrum distinctio. Cumque, harum
+                iure! Distinctio ipsa iusto, recusandae omnis corporis earum voluptatem optio perferendis ratione
+                laborum numquam illum reiciendis incidunt ad explicabo praesentium minima? Architecto quibusdam
+                cupiditate assumenda neque vero maiores odit harum dicta magnam?</p>
+        </div>
+        <div class="detras">
+            <h1>Detras</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quod eos natus repellendus quaerat!
+                Veritatis tempora molestiae qui quae hic libero sunt aliquid illo nostrum distinctio. Cumque, harum
+                iure! Distinctio ipsa iusto, recusandae omnis corporis earum voluptatem optio perferendis ratione
+                laborum numquam illum reiciendis incidunt ad explicabo praesentium minima? Architecto quibusdam
+                cupiditate assumenda neque vero maiores odit harum dicta magnam?</p>
+        </div>
+    </div>
+</body>
+
+</html>
