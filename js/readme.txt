@@ -1,0 +1,1 @@
+java -jar compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --js codigo.js --js_output_file codigo-compiled.js

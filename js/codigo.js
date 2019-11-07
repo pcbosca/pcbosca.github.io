@@ -159,9 +159,9 @@ function quitaBlancoYNegro() {
     objeto.style.filter = ""
 }
 
-var miImagen1 = document.getElementById("miFoto1")
-miImagen1.addEventListener("mouseover", ponBlancoYNegro)
-miImagen1.addEventListener("mouseout", quitaBlancoYNegro)
+// var miImagen1 = document.getElementById("miFoto1")
+// miImagen1.addEventListener("mouseover", ponBlancoYNegro)
+// miImagen1.addEventListener("mouseout", quitaBlancoYNegro)
 
 // Version mejorada de blur
 /* function ponBlur() {
@@ -187,11 +187,11 @@ function quitaBlur(objeto) {
     objeto.style.filter = ""
 }
 
-var miImagen2 = document.getElementById("miFoto2")
-if (miImagen2) {
-    miImagen2.addEventListener("mouseover", function () { ponBlur(this) })
-    miImagen2.addEventListener("mouseout", function () { quitaBlur(this) })
-}
+// var miImagen2 = document.getElementById("miFoto2")
+// if (miImagen2) {
+//     miImagen2.addEventListener("mouseover", function () { ponBlur(this) })
+//     miImagen2.addEventListener("mouseout", function () { quitaBlur(this) })
+// }
 
 var miTexto = document.getElementById("miTexto")
 miTexto.addEventListener("mouseover", function () { ponBlur(this) })
