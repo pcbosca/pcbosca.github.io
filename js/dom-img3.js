@@ -1,6 +1,4 @@
-
 let crearImagen = function() {
-//function crearImagen() {
     // Crear nodo de tipo Element
     let  imagen = document.createElement("img");
 
@@ -25,8 +23,8 @@ let borrarImagenes = function() {
     let  j = numImagenes - 1;
     while (numImagenes > 0) {
         imagenes[j].remove()
-        numImagenes = numImagenes - 1
-        j = numImagenes - 1
+        --numImagenes
+        --j
     }
 }
 
