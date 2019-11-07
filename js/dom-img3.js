@@ -21,9 +21,8 @@ let borrarImagenes = function() {
     // Recorrer array de imagenes e ir borrando cada una
     // BUCLE WHILE
     let  j = numImagenes - 1;
-    while (numImagenes > 0) {
+    while (j >= 0) {
         imagenes[j].remove()
-        --numImagenes
         --j
     }
 }
