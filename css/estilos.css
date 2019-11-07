@@ -56,29 +56,29 @@ h1, h2 {
 }
 
 /* unvisited link */
-a:link {
+/* a:link {
     color: rgb(0, 255, 255)
-}
+} */
 
 /* visited link */
-a:visited {
+/* a:visited {
     color: #00FF00
-}
+} */
 
 /* mouse over link */
 a:hover {
     color: #FF00FF;
     text-decoration: none
-}
+} 
 
 /* selected link */
-a:active {
+/* a:active {
     color: #0000FF
-}
+} */
 
 /* estilos para el posicinamiento de la página WEB */
 header {
-    height: 25rem;
+    height: 12rem;
     background-color: #888
 }
 
@@ -114,4 +114,30 @@ footer {
     filter: blur(5px)
 }*/
 
+/* estilos para el menú  */
+navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
 
+/* Navbar links on mouse-over */
+navbar a:hover {
+    background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+    background-color: #4CAF50;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+    navbar a {
+        float: none;
+        display: block;
+    }
+}
