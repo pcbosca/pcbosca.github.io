@@ -1,4 +1,4 @@
-"strict mode"
+"use strict"
 
 /* // Hola mundo
 alert("Hola mundo desde JavaScript!!")
