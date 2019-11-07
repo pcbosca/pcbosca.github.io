@@ -8,7 +8,9 @@ function cambia() {
 }
  
 var boton = document.getElementById("boton")
-boton.addEventListener("click", cambia)
+if (boton) {
+    boton.addEventListener("click", cambia)
+}
  /*
 // VARIABLES
 var n = 12
