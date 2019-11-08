@@ -23,6 +23,7 @@ const borrarImagenes = function() {
     let  j = numImagenes - 1;
     while (j >= 0) {
         imagenes[j].remove()
+        //imagenes[j].parentNode.removeChild(imagenes[j]);
         --j
     }
 }
