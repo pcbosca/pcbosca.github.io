@@ -1,4 +1,4 @@
-let crearImagen = function() {
+const crearImagen = function() {
     // Crear nodo de tipo Element
     let  imagen = document.createElement("img");
 
@@ -13,7 +13,7 @@ let crearImagen = function() {
     encab.appendChild(imagen)
 }
 
-let borrarImagenes = function() {
+const borrarImagenes = function() {
     // HTML DOM querySelectorAll() Method
     let  imagenes = document.querySelectorAll("#encabezado > img")
     let  numImagenes = imagenes.length;
