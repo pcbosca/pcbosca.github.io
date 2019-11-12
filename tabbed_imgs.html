@@ -1,108 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto'>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial;
-        }
-
-        /* The grid: Four equal columns that floats next to each other */
-        .column {
-            float: left;
-            width: 25%;
-            padding: 10px;
-        }
-
-        /* Style the images inside the grid */
-        .column img {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        .column img:hover {
-            opacity: 1;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* The expanding image container */
-        .container {
-            position: relative;
-            display: none;
-        }
-
-        /* Expanding image text */
-        #imgtext {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            font-size: 40px;
-        }
-
-        /* Closable button inside the expanded image */
-        .closebtn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            color: white;
-            font-size: 35px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="css/estilo_tabbed.css">
 </head>
 
 <body>
 
-    <div style="text-align:center">
-        <h2>Tabbed Image Gallery</h2>
-        <p>Click on the images below:</p>
+    <div class="centrado">
+        <h2>Gallería de imágenes en pestañas</h2>
+        <p>Haz click en las imágenes de abajo:</p>
     </div>
 
     <!-- The four columns -->
     <div class="row">
         <div class="column">
-            <img src="images/Chrysanthemum.jpg" alt="Crisantemos" style="width:100%" onclick="expandImage(this);">
+            <img id="img1" src="images/Chrysanthemum.jpg" alt="Crisantemos" class="ancho100">
         </div>
         <div class="column">
-            <img src="images/Hydrangeas.jpg" alt="Hortensias" style="width:100%" onclick="expandImage(this);">
+            <img id="img2" src="images/Hydrangeas.jpg" alt="Hortensias" class="ancho100">
         </div>
         <div class="column">
-            <img src="images/Jellyfish.jpg" alt="Medusa" style="width:100%" onclick="expandImage(this);">
+            <img id="img3" src="images/Jellyfish.jpg" alt="Medusa" class="ancho100">
         </div>
         <div class="column">
-            <img src="images/Koala.jpg" alt="Koala" style="width:100%" onclick="expandImage(this);">
+            <img id="img4" src="images/Koala.jpg" alt="Koala" class="ancho100">
+        </div>
+        <div class="column">
+            <img id="img5" src="images/Lighthouse.jpg" alt="Faro" class="ancho100">
+        </div>
+        <div class="column">
+            <img id="img6" src="images/Penguins.jpg" alt="Pingüinos" class="ancho100">
         </div>
     </div>
 
     <div class="container">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width:100%">
+        <span id="cierra" class="closebtn">&times;</span>
+        <img id="expandedImg" class="ancho100">
         <div id="imgtext"></div>
     </div>
 
-    <script>
-        function expandImage(img) {
-            var expandImg = document.getElementById("expandedImg");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = img.src;
-            imgText.innerHTML = img.alt;
-            expandImg.parentElement.style.display = "block";
-        }
+    <script src="js/codigo_tabbed.js">
     </script>
 
 </body>
