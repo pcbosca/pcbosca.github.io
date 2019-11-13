@@ -6,12 +6,12 @@ function expandImage(img) {
     expandImg.parentElement.style.display = "block";
 }
 
-function closeImage(img) {
-    img.parentElement.style.display = 'none'
+function closeImage() {
+    this.parentElement.style.display = 'none'
 }
 
 var cierra = document.getElementById("cierra")
-cierra.addEventListener("click", function () { closeImage(this) })
+cierra.addEventListener("click", closeImage)
 
 /* var img1 = document.getElementById("img1")
 img1.addEventListener("click", function () { expandImage(this) })
