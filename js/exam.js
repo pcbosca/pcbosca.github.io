@@ -2,9 +2,8 @@
 
 function toggleFlag() {
     var flag = document.getElementById("flag")
-
     // One solution
-    //flag.classList.toggle("change");
+    //flag.classList.toggle("visible");
     // Another
     if (flag.style.display === "none" || !flag.style.display) {
         flag.style.display = "block";
