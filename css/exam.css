@@ -31,11 +31,11 @@ header h1 {
 }
 
 .red {
-    background-color: yellow;
+    background-color: red;
 }
 
 .yellow {
-    background-color: red;
+    background-color: yellow;
 }
 
 .hidden {
