@@ -8,14 +8,19 @@ body {
 }
 
 header {
-    background-color: #f24537;
+    background-color: #F24537;
     min-height: 100px;
 }
 
 header h1 {
     margin: 0;
+    margin-left: 10px;
     padding: 0;
     color: white;
+}
+
+main, div, button  {
+    margin-left: 10px;
 }
 
 #logo {
@@ -54,6 +59,7 @@ footer {
 
 footer h2 {
     color: gray;
+    margin-left: 10px;
 }
 
 .myButton {
