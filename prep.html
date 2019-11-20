@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preparación Examen</title>
+
+    <style>
+        .myButton {
+            box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+            background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+            background-color: #79bbff;
+            border-radius: 6px;
+            border: 1px solid #84bbf3;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #528ecc;
+        }
+
+        .myButton:hover {
+            background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+            background-color: #378de5;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet <a href="http://www.google.es">consectetur</a> adipisicing elit. Repellendus odit
+        quaerat magnam obcaecati ab in suscipit
+        maiores. Quae amet consectetur suscipit esse adipisci libero repudiandae ullam, blanditiis, eos earum quasi.</p>
+    <div id="miDiv"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis quibusdam a aperiam, <a
+            href="http://www.easdcastello.org">laudantium</a>
+        enim nihil architecto ad eos sit voluptates at accusamus nesciunt commodi dolor rem autem perferendis ratione.
+    </p>
+    <p id="tercerp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis quibusdam a aperiam,
+        <a class="l3par" href="http://www.easdcastello.org">laudantium</a>
+        enim nihil architecto ad eos sit voluptates at accusamus nesciunt commodi dolor rem autem perferendis <a
+            class="l3par" href="http://www.elpais.com">ratione</a>.
+    </p>
+    <button id="botVer"> Ver información enlaces </button>
+    <p>
+        Número de enlaces: <span id="nl"></span>
+    </p>
+    <p>
+        Penúltimo: <span id="pl"></span>
+    </p>
+
+    <button id="bot3p" class="myButton">Ver número de enlaces tercer párrafo</button>
+    <p>
+        Número de enlaces tercer párrafo: <span id="nl3p"></span>
+    </p>
+    <script>
+        function verInfoEnlaces() {
+
+            /*var miDiv = document.getElementById("miDiv")
+            miDiv.innerHTML = "<div style='background-color: red; height:100px''>Hola</div>"*/
+            var enlaces = document.getElementsByTagName("a")
+            var numEnlaces = enlaces.length
+
+            var textonl = document.getElementById("nl")
+            textonl.innerHTML = numEnlaces
+
+            var textopl = document.getElementById("pl")
+            textopl.innerHTML = enlaces[numEnlaces - 2]
+        }
+
+        var botVer = document.getElementById("botVer")
+        botVer.addEventListener("click", verInfoEnlaces)
+
+        function verEnlacesTercerPar() {
+            //alert("enlaces tercer párrafo");
+            //var enlaces = document.getElementsByClassName("l3par")
+            var enlaces = document.querySelectorAll("#tercerp a")
+
+            var textol3p = document.getElementById("nl3p")
+            textol3p.innerHTML = enlaces.length
+        }
+
+        var bot3p = document.getElementById("bot3p")
+        bot3p.addEventListener("click", verEnlacesTercerPar)
+
+    </script>
+</body>
+
+</html>
