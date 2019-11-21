@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #contenedor {
+            position: relative;
+        }
+
+        .ancho300 {
+            width: 300px;
+        }
+
+        #cerrar {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 24px;
+            color: lightblue;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        #cerrar:hover {
+            color: darkblue;
+        }
+    </style>
+    <title>Muestra y oculta</title>
+</head>
+
+<body>
+    <div id="contenedor" class="ancho300">
+        <img src="../images/Koala.jpg" alt="Koala" class="ancho300">
+        <i class="fa fa-window-close" id="cerrar"></i>
+    </div>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nisi non incidunt sint enim inventore
+        aliquid, laboriosam fugiat totam obcaecati quis, consequuntur repellat. Maxime accusamus, est unde consequatur
+        quibusdam saepe.</p>
+
+    <script>
+        function oculta() {
+            //var padre = this.parentElement;
+            var padre = document.getElementById("contenedor")
+            padre.style.display = "none"
+        }
+
+        var cerrar = document.getElementById("cerrar")
+        cerrar.addEventListener("click", oculta)
+
+    </script>
+</body>
+
+</html>

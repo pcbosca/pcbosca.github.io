@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uso de modales</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /*Cookie Consent Begin*/
+        #cookieConsent {
+            background-color: rgba(20, 20, 20, 0.8);
+            min-height: 26px;
+            font-size: 14px;
+            color: #ccc;
+            line-height: 26px;
+            padding: 8px 0 8px 30px;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: none;
+            z-index: 9999;
+        }
+
+        */ #cookieConsent a {
+            color: #4B8EE7;
+            text-decoration: none;
+        }
+
+        #closeCookieConsent {
+            float: right;
+            /*display: inline-block;*/
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            margin: -15px 0 0 0;
+            font-weight: bold;
+        }
+
+        #closeCookieConsent:hover {
+            color: #FFF;
+        }
+
+        #cookieConsent a.cookieConsentOK {
+            background-color: #F1D600;
+            color: #000;
+            /*display: inline-block;*/
+            border-radius: 5px;
+            padding: 0 20px;
+            cursor: pointer;
+            float: right;
+            margin: 0 60px 0 10px;
+        }
+
+        #cookieConsent a.cookieConsentOK:hover {
+            background-color: #E0C91F;
+        }
+
+        /*Cookie Consent End*/
+    </style>
+</head>
+
+<body>
+
+    <h2>Ejemplo de modal</h2>
+
+    <p>Lorem ipsum dolor sit amet <a href="http://www.google.es">consectetur</a> adipisicing elit. Repellendus odit
+        quaerat magnam obcaecati ab in suscipit
+        maiores. Quae amet consectetur suscipit esse adipisci libero repudiandae ullam, blanditiis, eos earum quasi.</p>
+    <div id="miDiv"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis quibusdam a aperiam, <a
+            href="http://www.easdcastello.org">laudantium</a>
+        enim nihil architecto ad eos sit voluptates at accusamus nesciunt commodi dolor rem autem perferendis ratione.
+    </p>
+    <p id="tercerp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis quibusdam a aperiam,
+        <a class="l3par" href="http://www.easdcastello.org">laudantium</a>
+        enim nihil architecto ad eos sit voluptates at accusamus nesciunt commodi dolor rem autem perferendis <a
+            class="l3par" href="http://www.elpais.com">ratione</a>.
+    </p>
+
+    <div id="cookieConsent">
+        hola
+        <div id="closeCookieConsent">x</div>
+        This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK">That's
+            Fine</a>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios, elaborar información
+                estadística, analizar sus hábitos de navegación e inferir grupos de interés. Esto nos permite
+                personalizar el contenido que ofrecemos y mostrarle publicidad relacionada con sus preferencias.
+                Adicionalmente, compartimos los análisis de navegación y los grupos de interés inferidos con terceros.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        /* // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.addEventListener("click", function () {
+            modal.style.display = "none";
+        })
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.addEventListener("click", function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        })
+
+        modal.style.display = "block" */
+
+        function show(modal) {
+            modal.style.display = "block"
+        }
+        function hide(modal) {
+            modal.style.display = "none"
+        }
+
+        var cookieConsent = document.getElementById("cookieConsent");
+        setTimeout(function () { show(cookieConsent) }, 4000);
+
+        var closeCookieConsent = document.getElementById("closeCookieConsent")
+        closeCookieConsent.onclick = function () { hide(cookieConsent) }
+
+        var cookieConsentOK = document.getElementsByClassName("cookieConsentOK")
+        cookieConsentOK[0].onclick = function () { hide(cookieConsent) }
+    </script>
+
+</body>
+
+</html>
