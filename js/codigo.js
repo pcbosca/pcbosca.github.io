@@ -1,17 +1,18 @@
-"use strict"
+"use strict";
 
 /* // Hola mundo
 alert("Hola mundo desde JavaScript!!")
   */
 function cambia() {
-    document.getElementById("miTexto").innerHTML = "<p>Espero que funcione y no me mateis</p>"
+  document.getElementById("miTexto").innerHTML =
+    "<p>Espero que funcione y no me mateis</p>";
 }
- 
-var boton = document.getElementById("boton")
+
+var boton = document.getElementById("boton");
 if (boton) {
-    boton.addEventListener("click", cambia)
+  boton.addEventListener("click", cambia);
 }
- /*
+/*
 // VARIABLES
 var n = 12
 var m = 4
@@ -63,11 +64,21 @@ while (j < 4) {
 }
  */
 
-var informeEncabezados = ["Introducción", "Historia", "Resultados", "Conclusion"]
+var informeEncabezados = [
+  "Introducción",
+  "Historia",
+  "Resultados",
+  "Conclusion"
+];
 
-var informeEncabezados1 = ["Viva la Pepa", "God save the Queen", "Cosero", "Final"]
+var informeEncabezados1 = [
+  "Viva la Pepa",
+  "God save the Queen",
+  "Cosero",
+  "Final"
+];
 
-var informeEncabezados2 = ["Castellon", "Valencia", "Alicante", "Murcia"]
+var informeEncabezados2 = ["Castellon", "Valencia", "Alicante", "Murcia"];
 /*
 // FOR-IF BUCLE orden inverso
 for (var j = 4; j >= 0; --j) {
@@ -89,60 +100,62 @@ for (var j = 4; j >= 0; --j) {
 
 // BUCLE FOR y SWITCH, FUNCIONES
 function muestraEncabezados(informe) {
-    for (var j = 0; j < 4; ++j) {
-        switch (j) {
-            case 0:
-                document.write("<h1>" + informe[j] + "</h1>")
-                break
-            case 1:
-            case 2:
-                document.write("<h2>" + informe[j] + "</h2>")
-                break
-            case 3:
-                document.write("<h3>" + informe[j] + "</h3>")
-                break
-        }
-        alert(j)
+  for (var j = 0; j < 4; ++j) {
+    switch (j) {
+      case 0:
+        document.write("<h1>" + informe[j] + "</h1>");
+        break;
+      case 1:
+      case 2:
+        document.write("<h2>" + informe[j] + "</h2>");
+        break;
+      case 3:
+        document.write("<h3>" + informe[j] + "</h3>");
+        break;
     }
+    alert(j);
+  }
 }
 
 // Funciones: FUNCTION
 function calculaIVA(importe) {
-    var total = importe * 0.21
-    return total
+  var total = importe * 0.21;
+  return total;
 }
-var cantidad = 45000
-document.write("<p>El IVA de " + cantidad + " es " + calculaIVA(cantidad) + "</p>")
+var cantidad = 45000;
+document.write(
+  "<p>El IVA de " + cantidad + " es " + calculaIVA(cantidad) + "</p>"
+);
 
-muestraEncabezados(informeEncabezados)
-muestraEncabezados(informeEncabezados1)
-muestraEncabezados(informeEncabezados2)
+muestraEncabezados(informeEncabezados);
+muestraEncabezados(informeEncabezados1);
+muestraEncabezados(informeEncabezados2);
 
-var bn = false
+var bn = false;
 function blancoYNegro() {
-    var objeto = document.getElementById("miFoto1")
-    if (bn == false) {
-        objeto.style.filter = "grayscale(100%)"
-        bn = true
-    } else {
-        objeto.style.filter = ""
-        bn = false
-    }
+  var objeto = document.getElementById("miFoto1");
+  if (bn == false) {
+    objeto.style.filter = "grayscale(100%)";
+    bn = true;
+  } else {
+    objeto.style.filter = "";
+    bn = false;
+  }
 }
 /*
 var miImagen1 = document.getElementById("miFoto1")
 miImagen1.addEventListener("click", blancoYNegro)*/
 
-var bn2 = false
+var bn2 = false;
 function borroso() {
-    var objeto = document.getElementById("miFoto2")
-    if (bn2 == false) {
-        objeto.style.filter = "blur(5px)"
-        bn2 = true
-    } else {
-        objeto.style.filter = ""
-        bn2 = false
-    }
+  var objeto = document.getElementById("miFoto2");
+  if (bn2 == false) {
+    objeto.style.filter = "blur(5px)";
+    bn2 = true;
+  } else {
+    objeto.style.filter = "";
+    bn2 = false;
+  }
 }
 
 /*var miImagen2 = document.getElementById("miFoto2")
@@ -150,13 +163,13 @@ miImagen2.addEventListener("click", borroso)*/
 
 // Version mejorada blanco y negro
 function ponBlancoYNegro() {
-    var objeto = document.getElementById("miFoto1")
-    objeto.style.filter = "grayscale(100%)"
+  var objeto = document.getElementById("miFoto1");
+  objeto.style.filter = "grayscale(100%)";
 }
 
 function quitaBlancoYNegro() {
-    var objeto = document.getElementById("miFoto1")
-    objeto.style.filter = ""
+  var objeto = document.getElementById("miFoto1");
+  objeto.style.filter = "";
 }
 
 // var miImagen1 = document.getElementById("miFoto1")
@@ -180,11 +193,11 @@ miImagen2.addEventListener("mouseout", quitaBlur) */
 
 // Version mejorada de blur
 function ponBlur(objeto) {
-    objeto.style.filter = "blur(5px)"
+  objeto.style.filter = "blur(5px)";
 }
 
 function quitaBlur(objeto) {
-    objeto.style.filter = ""
+  objeto.style.filter = "";
 }
 
 // var miImagen2 = document.getElementById("miFoto2")
@@ -193,9 +206,13 @@ function quitaBlur(objeto) {
 //     miImagen2.addEventListener("mouseout", function () { quitaBlur(this) })
 // }
 
-var miTexto = document.getElementById("miTexto")
-miTexto.addEventListener("mouseover", function () { ponBlur(this) })
-miTexto.addEventListener("mouseout", function () { quitaBlur(this) })
+var miTexto = document.getElementById("miTexto");
+miTexto.addEventListener("mouseover", function() {
+  ponBlur(this);
+});
+miTexto.addEventListener("mouseout", function() {
+  quitaBlur(this);
+});
 
 // Version mejorada de blur y saturate
 /* function ponBlurYSature() {
@@ -214,31 +231,47 @@ miImagen3.addEventListener("mouseout", quitaBlurYSature) */
 
 // Version remejorada de blur y saturate
 function ponBlurYSature(objeto) {
-    objeto.style.filter = "blur(5px) saturate(4)"
+  objeto.style.filter = "blur(5px) saturate(4)";
 }
 
 function quitaBlurYSature(objeto) {
-    objeto.style.filter = ""
+  objeto.style.filter = "";
 }
 
-var miImagen1 = document.getElementById("miFoto1")
-miImagen1.addEventListener("mouseover", function () { ponBlurYSature(this) })
-miImagen1.addEventListener("mouseout", function () { quitaBlurYSature(this) })
+var miImagen1 = document.getElementById("miFoto1");
+miImagen1.addEventListener("mouseover", function() {
+  ponBlurYSature(this);
+});
+miImagen1.addEventListener("mouseout", function() {
+  quitaBlurYSature(this);
+});
 
-var miImagen2 = document.getElementById("miFoto2")
+var miImagen2 = document.getElementById("miFoto2");
 if (miImagen2) {
-    miImagen2.addEventListener("mouseover", function () { ponBlurYSature(this) })
-    miImagen2.addEventListener("mouseout", function () { quitaBlurYSature(this) })
+  miImagen2.addEventListener("mouseover", function() {
+    ponBlurYSature(this);
+  });
+  miImagen2.addEventListener("mouseout", function() {
+    quitaBlurYSature(this);
+  });
 }
 
-var miImagen3 = document.getElementById("miFoto3")
+var miImagen3 = document.getElementById("miFoto3");
 if (miImagen3) {
-    miImagen3.addEventListener("mouseover", function () { ponBlurYSature(this) })
-    miImagen3.addEventListener("mouseout", function () { quitaBlurYSature(this) })
+  miImagen3.addEventListener("mouseover", function() {
+    ponBlurYSature(this);
+  });
+  miImagen3.addEventListener("mouseout", function() {
+    quitaBlurYSature(this);
+  });
 }
 
-var miImagen4 = document.getElementById("miFoto4")
+var miImagen4 = document.getElementById("miFoto4");
 if (miImagen4) {
-    miImagen4.addEventListener("mouseover", function () { ponBlurYSature(this) })
-    miImagen4.addEventListener("mouseout", function () { quitaBlurYSature(this) })
+  miImagen4.addEventListener("mouseover", function() {
+    ponBlurYSature(this);
+  });
+  miImagen4.addEventListener("mouseout", function() {
+    quitaBlurYSature(this);
+  });
 }

@@ -16,10 +16,10 @@
 
 // Solución elegante 2.0
 function ocultar() {
-    //alert("Ocultar")
-    var contenedor = document.getElementById("contenedor")
-    contenedor.style.visibility = "hidden"
+  //alert("Ocultar")
+  var contenedor = document.getElementById("contenedor");
+  contenedor.style.visibility = "hidden";
 }
 
-var cerrar = document.getElementById("cerrar")
-cerrar.addEventListener("click", ocultar)
+var cerrar = document.getElementById("cerrar");
+cerrar.addEventListener("click", ocultar);

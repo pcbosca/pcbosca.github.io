@@ -2,34 +2,42 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-    showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-    showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
-var prev = document.getElementById("prev")
-prev.addEventListener("click", function () { plusSlides(-1) })
+var prev = document.getElementById("prev");
+prev.addEventListener("click", function() {
+  plusSlides(-1);
+});
 
-var next = document.getElementById("next")
-next.addEventListener("click", function () { plusSlides(1) })
+var next = document.getElementById("next");
+next.addEventListener("click", function() {
+  plusSlides(1);
+});
 
 /* var dot1 = document.getElementById("dot1")
 dot1.addEventListener("click", function () { currentSlide(1) })
@@ -47,9 +55,11 @@ var dot5 = document.getElementById("dot5")
 dot5.addEventListener("click", function () { currentSlide(5) }) */
 
 // BUCLE FOR solución ES6
-var dot = []
+var dot = [];
 for (var i = 0; i < 5; i++) {
-    let e = i + 1
-    dot[i] = document.getElementById("dot" + e)
-    dot[i].addEventListener("click", function () { currentSlide(e) })
+  let e = i + 1;
+  dot[i] = document.getElementById("dot" + e);
+  dot[i].addEventListener("click", function() {
+    currentSlide(e);
+  });
 }

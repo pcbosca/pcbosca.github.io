@@ -1,10 +1,10 @@
 // Version remejorada de blur y saturate
 function ponBlurYSature(objeto) {
-    objeto.style.filter = "blur(5px) saturate(4)"
+  objeto.style.filter = "blur(5px) saturate(4)";
 }
 
 function quitaBlurYSature(objeto) {
-    objeto.style.filter = ""
+  objeto.style.filter = "";
 }
 
 /* var miImagen1 = document.getElementById("miFoto1")
@@ -33,10 +33,14 @@ for (i = 0; i < misImagenes.length; i++) {
 } */
 
 // Version 2
-var misImagenes = document.images
+var misImagenes = document.images;
 
-var i
+var i;
 for (i = 0; i < misImagenes.length; i++) {
-    misImagenes[i].addEventListener("mouseover", function() {ponBlurYSature(this)})
-    misImagenes[i].addEventListener("mouseout", function() {quitaBlurYSature(this)})
+  misImagenes[i].addEventListener("mouseover", function() {
+    ponBlurYSature(this);
+  });
+  misImagenes[i].addEventListener("mouseout", function() {
+    quitaBlurYSature(this);
+  });
 }
