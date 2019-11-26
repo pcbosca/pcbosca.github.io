@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 imágenes</title>
+</head>
+
+<body>
+    <div id="contenedor">
+    </div>
+    <script>
+        var imgs = ["images/Jellyfish.jpg", "images/Koala.jpg", "images/Lighthouse.jpg", "images/Penguins.jpg", "images/Tulips.jpg"]
+
+        /*var imgs = ["images/Jellyfish.jpg", "images/Koala.jpg", "images/Lighthouse.jpg"]*/
+
+        function adjuntarImagenes() {
+            let contenedor = document.getElementById("contenedor");
+
+            for (var i = 0; i < imgs.length; i++) {
+                // Crear nodo de tipo Element
+                let imagen = document.createElement("img");
+
+                // Añado atributo src
+                imagen.setAttribute("src", imgs[i]);
+
+                // Añado atributo height
+                imagen.setAttribute("height", "100px");
+
+                // Añadir el imagen al contenedor
+                contenedor.appendChild(imagen);
+            }
+        }
+
+        adjuntarImagenes();
+
+    </script>
+</body>
+
+</html>
