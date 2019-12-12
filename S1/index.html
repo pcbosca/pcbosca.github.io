@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PRINCIPAL</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <p style="color:white"><strong>Hola mundo de la programación!</strong></p>
+        <navbar>
+            <a href="pagina2.html">Pagina 2</a>
+            <a href="pagina3.html">Pagina 3</a>
+            <a href="pagina4.html">Pagina 4</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="pagina3.html"><img id="miFoto1" src="images/Koala.jpg" width="200" alt=""></a>
+            <a href="pagina5.html">Pagina 5</a>
+            <a href="pagina6.html">Pagina 6</a>
+            <a href="pagina7.html">Pagina 7</a>
+            <a href="pagina8.html">Pagina 8</a>
+            <a href="pagina9.html">Pagina 9</a>
+            <a href="http://www.elmundo.es/">Periodico EL MUNDO</a>
+        </navbar>
+    </header>
+    <main>
+        <h1>Titulo de primer nivel</h1>
+        <p class="parrafo-verde">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reprehenderit cum
+            facere, soluta eius
+            recusandae, laboriosam officia minus molestiae architecto quo rerum optio dolor vero animi fugit. Molestias
+            iure deleniti tempore voluptatibus, deserunt alias officia minus, sapiente nisi assumenda consequuntur et
+            illo, repellat quam quidem reiciendis sed necessitatibus? Animi, quo.</p>
+        <h2>Titulo de nivel 2</h2>
+        <p class="cian" id="miTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vel molestias
+            ratione velit
+            praesentium
+            vero. Voluptatibus amet, libero minus nemo nulla assumenda atque nesciunt molestiae commodi veritatis
+            laboriosam error quos voluptate recusandae ab deleniti aliquam sint corporis quae. Eos nam delectus autem
+            minus corrupti magni veniam deleniti quas est sint, sequi unde, iste explicabo consequatur dignissimos?
+            Aliquid, quibusdam. Est consectetur optio quisquam eveniet doloribus placeat vero ipsa laborum nesciunt.
+            Porro eligendi possimus architecto illum ad?</p>
+        <!--Un lisa de viñetas -->
+        <ul>
+            <li>Enlaces</li>
+            <li>Imágenes</li>
+            <li>Títulos</li>
+            <li>Listas</li>
+        </ul>
+        <ol>
+            <li>Enlaces</li>
+            <li>Imágenes</li>
+            <li>Títulos</li>
+            <li>Listas</li>
+        </ol>
+        <video src="videos/Wildlife.mp4" autoplay controls width="300" poster="images/captura.png"></video>
+        <audio src="audios/voz.mp3" controls autoplay></audio>
+
+        <a href="videos/Wildlife.mp4">Ver vídeo</a>
+        <canvas id="lienzo1" width="600" height="400">
+            <script type="text/javascript">
+                var canvas = document.getElementById("lienzo1")
+                var contexto = canvas.getContext("2d")
+                contexto.lineWidth = 2
+                for (i = 0; i <= 600; i += 20) {
+                    contexto.moveTo(0, 0)
+                    contexto.lineTo(i, 400)
+                    contexto.stroke()
+                }
+            </script>
+        </canvas>
+        <table style="border:1px solid black">
+            <tr>
+                <th></th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr>
+                <th>10:30</th>
+                <td>Matemáticas</td>
+                <td>Geografía</td>
+                <td>Física</td>
+                <td>Dibujo</td>
+                <td>Matemáticas</td>
+            </tr>
+            <tr>
+                <th>11:30</th>
+                <td>Inglés</td>
+                <td>Lenguaje</td>
+                <td>Geografía</td>
+                <td>Química</td>
+                <td>Física</td>
+            </tr>
+            <tr>
+                <th>12:30</th>
+                <td>Valenciano</td>
+                <td colspan="2">Lenguaje de sordos</td>
+
+                <td>Química</td>
+                <td>Ciencias socialess</td>
+            </tr>
+        </table>
+    </main>
+    <footer style="background-color: lightgray">
+        <p>Copyright (c) 2019 EASDCASTELLO.org</p>
+    </footer>
+    <script src="js/codigo.js"></script>
+</body>
+
+</html>

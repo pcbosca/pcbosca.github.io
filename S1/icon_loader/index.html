@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image preloader</title>
+
+  <style>
+    /* Center the loader */
+    #loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Add animation to "page content" */
+    .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+
+    @-webkit-keyframes animatebottom {
+      from {
+        bottom: -100px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0px;
+        opacity: 1
+      }
+    }
+
+    @keyframes animatebottom {
+      from {
+        bottom: -100px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    #gallery_images {
+      display: none;
+      text-align: center;
+    }
+
+    #gallery_images img {
+      width: 25%;
+    }
+  </style>
+</head>
+
+<body onload="init()" style="margin:0;">
+
+  <div id="loader"></div>
+
+  <!-- Container to append Images loaded using PreloadJS -->
+  <div id="gallery_images" class="animate-bottom"></div>
+
+  <script src="js/preloadjs.min.js"></script>
+
+  <script>
+
+    function init() {
+      var gallery_images = document.getElementById("gallery_images");
+      var loader = document.getElementById("loader");
+
+      var img_queue = new createjs.LoadQueue(false);
+      img_queue.on("progress", event => {
+        var progress_percentage = Math.floor(event.progress * 100);
+
+        console.log("progress " + progress_percentage);
+      }, this);
+      img_queue.on("complete", event => {
+        loader.style.display = "none";
+        gallery_images.style.display = "block";
+        alert("Complete!");
+      }, this);
+      img_queue.on("fileload", handleFileComplete, this);
+
+      img_queue.loadFile("../images/Hydrangeas.jpg");
+      img_queue.loadFile("../images/Jellyfish.jpg");
+      img_queue.loadFile("../images/Koala.jpg");
+      img_queue.loadFile("../images/Lighthouse.jpg");
+      img_queue.loadFile("../images/Penguins.jpg");
+      img_queue.loadFile("../images/Tulips.jpg");
+      img_queue.loadFile("../images/Chrysanthemum.jpg");
+
+      /*img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/1.png");
+      img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/2.png");
+      img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/3.png");
+      img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/4.png");
+      img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/5.png");
+      img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/6.png");
+      img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/7.png");
+      img_queue.loadFile("https://freakyjolly.com/demo/jquery/PreloadJS/images/8.png");*/
+
+      function handleFileComplete(event) {
+        var item = event.item;
+        var type = item.type;
+
+        if (type == createjs.Types.IMAGE) {
+          gallery_images.appendChild(event.result);
+          //alert("Result " + event.result.src);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
