@@ -2,24 +2,44 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
 }
-
+.container {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
 header {
   background-color: pink;
   position: relative;
+  height: 35%;
+}
+
+main {
+  height: 35%;
+  overflow: auto;
 }
 
 footer {
   background-color: grey;
+  height: 30%;
 }
 
 .titulo {
   position: absolute;
   top: 10px;
   right: 10px;
+  /*float: right;*/
 }
+
+/* .clearfix {
+  clear: both;
+} */
 
 .topnav {
   overflow: hidden;

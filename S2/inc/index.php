@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+<div class="container">
 <?php
 
 /* incluir el header del web */
@@ -30,5 +31,6 @@ include "header.html";
 /* incluir el footer y script del web */
 include "footer.html";
 ?>
+</div>
 </body>
 </html>
