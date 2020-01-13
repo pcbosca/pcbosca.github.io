@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left,
+        .right {
+            height: 200px;
+            text-align: center;
+        }
+
+        .left {
+            background: blue;
+            flex: 4 1 200px;
+            /*flex: 75%;*/
+        }
+
+        .right {
+            background: green;
+            flex: 1 1 200px;
+            /*flex: 25%;*/
+        }
+
+        .main {
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="left">
+            <h1>LEFT</h1>
+        </div>
+        <div class="right">
+            <h1>RIGHT</h1>
+        </div>
+    </div>
+    <div class="main">
+
+    </div>
+</body>
+
+</html>
