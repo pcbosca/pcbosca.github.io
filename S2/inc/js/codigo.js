@@ -6,3 +6,10 @@ function desplegar_menu() {
         x.className = "topnav";
     }
 }
+
+var btnHamburguesa = document.getElementById("btnHamb");
+if (btnHamburguesa) {
+    btnHamburguesa.addEventListener("click", function() {
+    desplegar_menu();
+  });
+}
