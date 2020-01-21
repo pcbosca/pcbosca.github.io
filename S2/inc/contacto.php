@@ -11,15 +11,11 @@
 <body>
 <div class="container">
 <?php
+$item1 = "href='index.php'";
+$item2 = "href='#' class='active'";
 /* incluir el header del web */
-include "header.html";
+include "header.php";
 ?>
-    <div class="topnav" id="myTopnav">
-    <a href="index.php">Inicio</a>
-    <a href="#" class="active">Contacto</a>
-    <a href="javascript:void(0);" class="icon" id="btnHamb">
-        <i class="fa fa-bars"></i></a>
-    </div>
     <main>
     <h1>Contactar</h1>
     <img src="images/iconmonstr-facebook-4-120.png" alt="Facebook">

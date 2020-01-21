@@ -11,15 +11,11 @@
 <body>
 <div class="container">
 <?php
+$item1 = "href='#' class='active'";
+$item2 = "href='contacto.php'";
 /* incluir el header del web */
-include "header.html";
+include "header.php";
 ?>
-    <div class="topnav" id="myTopnav">
-    <a href="#" class="active">Inicio</a>
-    <a href="contacto.php">Contacto</a>
-    <a href="javascript:void(0);" class="icon" id="btnHamb">
-        <i class="fa fa-bars"></i></a>
-    </div>
     <main>
         <h1>Mi porfolio</h1>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti impedit deleniti aut qui tempore earum molestiae. Vel, sed, totam repudiandae asperiores officiis mollitia tempore accusamus vero quam molestias unde minima ipsam minus voluptas expedita. Fugiat vero voluptatibus totam non iure deserunt dicta, inventore quisquam. Rem nobis adipisci molestias id nostrum accusamus soluta itaque ea exercitationem? Id similique ratione, alias mollitia atque soluta voluptatem quisquam accusantium consequatur ab iste temporibus omnis. Repudiandae, deserunt facere minima sunt eaque non dicta adipisci perferendis saepe necessitatibus exercitationem mollitia veniam cupiditate itaque quos numquam consequuntur ratione, quidem, corrupti rerum ipsum nesciunt pariatur obcaecati molestiae!
