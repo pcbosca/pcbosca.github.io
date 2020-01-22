@@ -1,6 +1,6 @@
 <header>
     <img src="images/iconmonstr-briefcase-9-240.png" alt="Logo">
-    <h1 class="titulo">Pepito de los Palotes DESIGN</h1>  
+    <h1 class="titulo">Pepito de los Palotes DESIGN</h1>
 </header>
 <div class="topnav" id="myTopnav">
     <a <?php echo $item1; ?>>Inicio</a>
