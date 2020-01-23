@@ -1,17 +1,29 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: popLight;
+  src: url("../fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: popRegular;
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 html,
 body {
-  height: 100%;
-  margin: 0;
+  height: 100vh;
+  font-family: popLight;
 }
 
 form input {
   padding: 10px 5px 10px 5px;
   margin: 10px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   width: 40%;
 }
 
@@ -21,23 +33,41 @@ form p {
 }
 
 .container {
-  height: 100%;
+  height: 100vh;
   width: 80%;
   display: flex;
   flex-direction: column; /* make main axis vertical */
   align-items: center;
   justify-content: center;
-  background: red;
+  background: radial-gradient(red, rgba(105, 2, 28, 0.835));
   text-align: center;
   margin: auto;
 }
 
 .box {
   width: 40%;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: white;
   background: green;
   display: flex;
   justify-content: space-between;
   align-items: center; /* for single line flex container */
+}
+
+@media (max-width: 1024px) {
+  /*body {
+    display: none;
+  }*/
+  .box {
+    flex-direction: column; /* make main axis vertical */
+    width: 60%;
+  }
+
+  form input {
+    width: 90%;
+  }
+
+  form input[type="submit"] {
+    width: 60%;
+  }
 }
