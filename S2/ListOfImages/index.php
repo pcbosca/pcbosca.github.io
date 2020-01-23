@@ -1,7 +1,7 @@
 <?php
 
 $filename = "imagenes.txt";
-$miArchivo = fopen($filename, "r") or die("No puedo abrir el archivo: " .  $filename);
+$miArchivo = fopen($filename, "r") or die("No puedo abrir el archivo: " . $filename);
 
 /* leer y mostrar todo el archivo leyendolo linea a linea */
 while (!feof($miArchivo)) {
