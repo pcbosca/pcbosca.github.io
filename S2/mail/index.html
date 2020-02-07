@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        input {
+            display: block;
+            margin: 0 20px 10px 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        form {
+            width: 40%;
+            height: 350px;
+            background: rgb(190, 223, 133);
+            padding-left: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario de contacto</h1>
+    <form action="send_mail.php" method="GET">
+        Nombre <input type="text" name="nombre" required>
+        Correo <input type="email" name="correo">
+        Mensaje <textarea name="mensaje" cols="60" rows="10" required></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
