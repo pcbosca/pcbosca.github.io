@@ -1,14 +1,15 @@
 <?php
 /* lee los datos del formulario */
-echo "Nombre: " . $_GET["nombre"] . "<br>\n";
+/* echo "Nombre: " . $_GET["nombre"] . "<br>\n";
 echo "Correo: " . $_GET["correo"] . "<br>\n";
-echo "Mensaje: " . $_GET["mensaje"] . "<br>\n";
+echo "Mensaje: " . $_GET["mensaje"] . "<br>\n"; */
 
-/* $to = "pcastello@easdcastello.org";
+/*
+$to = "pcastello@easdcastello.org";
 $subject = "[WEB]";
 $txt = $_GET["mensaje"];
 $headers = "From: " . $_GET["correo"] . "\r\n";
-mail($to, $subject, $txt, $headers); */
+mail($to, $subject, $txt, $headers);*/
 
 //Import PHPMailer classes into
 use PHPMailer\PHPMailer\PHPMailer;
@@ -22,7 +23,7 @@ require "PHPMailer/SMTP.php";
 $mail = new PHPMailer(true);
 
 //Server settings
-$mail->SMTPDebug = SMTP::DEBUG_SERVER; // Enable verbose debug output
+$mail->SMTPDebug = SMTP::DEBUG_OFF; // Enable verbose debug output
 $mail->isSMTP(); // Send using SMTP
 $mail->Host = 'smtp.gmail.com'; // Set the SMTP server to send through
 $mail->SMTPAuth = true; // Enable SMTP authentication
@@ -40,20 +41,20 @@ $mail->SMTPOptions = array(
 );
 
 //Recipients
-$mail->setFrom('pcbosca@gmail.com', 'Mailer'); // $_GET["correo"]
+$mail->setFrom($_GET["correo"], $_GET["nombre"]);
 $mail->addAddress('pcastello@easdcastello.org', 'Pascual Castello'); // Add a recipient
 
 // Content
 $mail->isHTML(true); // Set email format to HTML
-$mail->Subject = 'Here is the subject'; // $_GET["nombre"]
-$mail->Body = 'This is the HTML message body <b>in bold!</b>'; // $_GET["mensaje"]
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; // $_GET["mensaje"]
+$mail->Subject = '[WEB]';
+$mail->Body = $_GET["mensaje"];
+$mail->AltBody = $_GET["mensaje"];
 
 //send the message, check for errors
 if (!$mail->send()) {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'Message sent!';
+    echo 'Mensaje enviado!';
 }
 
 ?>
