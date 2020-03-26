@@ -1,0 +1,24 @@
+Informe creado: 
+	26/03/2020	11:44:26
+
+Nombre del proyecto: landing_page.aep
+
+Archivos de origen recopilados en: 
+	C:\Users\Pascual\Desktop\Landing Page\source\landing_page carpeta
+
+Archivos de origen recopilados: Todo
+
+Comp. recopiladas:  
+	woman-holding-a-white-headphones-3756939
+	
+Número de archivos recopilados: 2
+
+Tamaño de los archivos recopilados: 29,7 MB
+
+Archivos de origen recopilados: 
+	C:\Users\Pascual\Desktop\Landing Page\source\Wildlife.wmv
+	C:\Users\Pascual\Desktop\Landing Page\source\woman-holding-a-white-headphones-3756939_bw.jpg
+	
+Procesando plugins:
+	Classic 3D
+	
