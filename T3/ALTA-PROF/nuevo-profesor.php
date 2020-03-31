@@ -27,13 +27,13 @@ $frm_apellidos = trim($_GET["apellidos"]);
 $frm_asignatura = trim($_GET["asignatura"]);
 
 $sql = "INSERT INTO profesores (nombre, apellidos, asignatura)
-VALUES ('" . $frm_nombre . "','" . $frm_apellidos . "','" . $frm_asignatura . "')";
+VALUES ('$frm_nombre','$frm_apellidos ','$frm_asignatura')";
 
 if (mysqli_query($conn, $sql)) {
     $last_id = mysqli_insert_id($conn);
-    echo "<h2>Nuevo registro creado con éxito. El último ID insertado es: " . $last_id . "</h2>";
+    echo "<h2>Nuevo registro creado con éxito. El último ID insertado es: $last_id </h2>";
 } else {
-    echo "<h3>Error: " . $sql . "</h3>" . mysqli_error($conn);
+    echo "<h3>Error: $sql </h3>" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
