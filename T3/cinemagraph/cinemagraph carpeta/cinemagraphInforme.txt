@@ -1,0 +1,23 @@
+Informe creado: 
+	01/04/2020	15:13:28
+
+Nombre del proyecto: cinemagraph.aep
+
+Archivos de origen recopilados en: 
+	C:\xampp\htdocs\T3\cinemagraph\cinemagraph carpeta
+
+Archivos de origen recopilados: Todo
+
+Comp. recopiladas:  
+	video
+	
+Número de archivos recopilados: 1
+
+Tamaño de los archivos recopilados: 6,7 MB
+
+Archivos de origen recopilados: 
+	C:\xampp\htdocs\T3\cinemagraph\video.mp4
+	
+Procesando plugins:
+	Classic 3D
+	
